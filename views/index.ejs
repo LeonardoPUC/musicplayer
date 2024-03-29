@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+</head>
+<body>
+    <% allMusics.forEach((music) => { %>
+        <h2><%= music.owner %> - <%= music.name %></h2>
+        <audio controls>
+            <source src="/music/<%= music.archive %>" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <hr/>
+    <% }); %>
+</body>
+</html>
